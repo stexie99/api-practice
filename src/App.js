@@ -2,9 +2,9 @@ import './App.css';
 import React, { useState, useEffect } from 'react'
 import SearchBar from './components/SearchBar';
 import Gallery from './components/Gallery'
+import { Image } from 'react-bootstrap';
 
 function App() {
-  let [message, setMessage] = useState('Seach for movies')
   let [search, setSearch] = useState('')
   let [data, setData] = useState('')
   const API_URL = 'http://www.omdbapi.com/?apikey=a6be511c&t='
@@ -27,13 +27,15 @@ function App() {
   }
 
   return (
-    <div className='search'>
-      <SearchBar handleSearch={handleSearch}/>
-      <br/>
-      {message}
-      <br/>
-      <Gallery data={data} />
+    <>
+    <div className='App'>
+      <div className='main'>
+        <SearchBar handleSearch={handleSearch}/>
+        <Image className='background'src={data.Poster}/>
+      </div>
     </div>
+    <Gallery data={data} />
+    </>
   );
 }
 

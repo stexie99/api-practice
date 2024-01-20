@@ -1,4 +1,6 @@
 import react, { useEffect, useState } from 'react'
+import Image from 'react-bootstrap/Image'
+
 function Gallery(props){
     // let moviesFormatted = props.data.map((movie)=>{
     //     <div>
@@ -7,10 +9,18 @@ function Gallery(props){
     //     </div>
     // })
     return(
-        <div style={{ backgroundImage: `url(${props.data.Poster})`, borderStyle: 'solid' }}>
-            <h1>{props.data.Title}</h1>
-            <h2>{props.data.Year}</h2>
-        </div>
+        <>
+            <div className='Gallery'>
+                <div>
+                    <Image src={props.data.Poster}/>
+                </div>
+                <div>
+                    <h1>{props.data.Title}</h1>
+                    <h2>{props.data.Year}</h2>
+                    <p>{props.data.Plot}</p>
+                </div>
+            </div>
+        </>
     )
 }
 
