@@ -14,10 +14,11 @@ function Gallery(props){
                 <div>
                     <Image src={props.data.Poster}/>
                 </div>
-                <div>
-                    <h1>{props.data.Title}</h1>
-                    <h2>{props.data.Year}</h2>
+                <div className='text'>
+                    <h1>{props.data.Title}</h1> 
+                    <p>{props.data.Year}, Directed by {props.data.Director}</p>
                     <p>{props.data.Plot}</p>
+                    <p>{props.data.Awards}</p>
                 </div>
             </div>
         </>

@@ -29,12 +29,14 @@ function App() {
   return (
     <>
     <div className='App'>
-      <div className='main'>
-        <SearchBar handleSearch={handleSearch}/>
-        <Image className='background'src={data.Poster}/>
+      <SearchBar handleSearch={handleSearch}/>
+      <div className='main' style={{backgroundImage:`url(${data.Poster})`}}>
+          <Image className='background'/>
       </div>
     </div>
-    <Gallery data={data} />
+    <div className='info'>
+      <Gallery data={data} />
+    </div>
     </>
   );
 }
