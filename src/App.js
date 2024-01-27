@@ -15,7 +15,7 @@ function App() {
       const response = await fetch(API_URL + search)
       const resData = await response.json()
       setData(resData)
-      console.log(resData)
+      console.log(resData.Ratings)
     }
     fetchData()
     }
@@ -27,18 +27,20 @@ function App() {
   }
 
   return (
-    <>
     <div className='App'>
-      <SearchBar handleSearch={handleSearch}/>
-      <div className='main' style={{backgroundImage:`url(${data.Poster})`}}>
-          <Image className='background'/>
-      </div>
+      <SearchBar handleSearch={handleSearch} />
+      {search && data && (
+        <div className='main' style={{ backgroundImage: `url(${data.Poster})` }}>
+          <Image className='background' rounded />
+        </div>
+      )}
+      {search && data && (
+        <div className='info'>
+          <Gallery data={data} />
+        </div>
+      )}
     </div>
-    <div className='info'>
-      <Gallery data={data} />
-    </div>
-    </>
-  );
+  )
 }
 
 export default App;
