@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import SearchBar from './components/SearchBar';
 import Gallery from './components/Gallery'
 import { Image } from 'react-bootstrap';
+import Reviews from './components/Reviews';
 
 function App() {
   let [search, setSearch] = useState('')
@@ -15,7 +16,7 @@ function App() {
       const response = await fetch(API_URL + search)
       const resData = await response.json()
       setData(resData)
-      console.log(resData.Ratings)
+      console.log(resData)
     }
     fetchData()
     }
@@ -31,12 +32,17 @@ function App() {
       <SearchBar handleSearch={handleSearch} />
       {search && data && (
         <div className='main' style={{ backgroundImage: `url(${data.Poster})` }}>
-          <Image className='background' rounded />
+          <Image className='background' rounded/>
         </div>
       )}
       {search && data && (
         <div className='info'>
           <Gallery data={data} />
+        </div>
+      )}
+      {search && data && (
+        <div>
+          <Reviews data={data} />
         </div>
       )}
     </div>

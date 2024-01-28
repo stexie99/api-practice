@@ -1,5 +1,6 @@
-import react, { useEffect, useState } from 'react'
-import Image from 'react-bootstrap/Image'
+import react, { useEffect, useState } from 'react';
+import Image from 'react-bootstrap/Image';
+
 
 function Gallery(props){
     // let Ratings = props.data.Ratings.map((item, i)=>{
@@ -24,7 +25,7 @@ function Gallery(props){
                     {/* <p>{Ratings}</p> */}
                 </div>
                 <div className='watch'>
-                    <a href={`https://www.amazon.com/s?k=${props.data.Title}`}>Watch on Amazon</a>
+                    <img src='/images/amazon.png' height='24' alt='amazon logo'></img><a href={`https://www.amazon.com/s?k=${props.data.Title}`}>Watch on Amazon</a><br/>
                     <a href={`https://en.wikipedia.org/wiki/${props.data.Title}_(${props.data.Year}_film)`}>Wikipedia</a>
                 </div>
             </div>
