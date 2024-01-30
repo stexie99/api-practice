@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react'
 import SearchBar from './components/SearchBar';
 import Gallery from './components/Gallery'
 import { Image } from 'react-bootstrap';
-import Reviews from './components/Reviews';
 
 function App() {
   let [search, setSearch] = useState('')
@@ -32,17 +31,12 @@ function App() {
       <SearchBar handleSearch={handleSearch} />
       {search && data && (
         <div className='main' style={{ backgroundImage: `url(${data.Poster})` }}>
-          <Image className='background' rounded/>
+          <img className='background' />
         </div>
       )}
       {search && data && (
         <div className='info'>
           <Gallery data={data} />
-        </div>
-      )}
-      {search && data && (
-        <div>
-          <Reviews data={data} />
         </div>
       )}
     </div>

@@ -1,12 +1,15 @@
 body{
-  background-color: beige;
+  width:100vw;
+  height: 100vh;
+  background-color: #eeeeee;
+  /* background-image: linear-gradient(to right, #2c3e50, #4ca1af); */
+  /* background-image: linear-gradient( #5c5c5c 10%, #aeaeae 50% , #eeeeee ); */
 }
 
 .App{
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   margin-top: .8em;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -26,7 +29,7 @@ body{
 .background{
   width:1400px;
   height:400px;
-  background-repeat: no-repeat;
+  border: none;     
 }
 
 .main{
@@ -36,13 +39,21 @@ body{
   margin-top:1em;
   background-size:cover;
   background-repeat: no-repeat;
-  mask-image: linear-gradient(#000000, rgba(0, 0, 0, 0))
+  box-shadow: 0 0 20px 20px #eeeeee inset;
+  border: none;
+  /* mask-image: 
+  linear-gradient(to top, transparent, rgba(238, 238, 238, 0.5) 20%, rgba(238, 238, 238, 1) 50%, rgba(238, 238, 238, 0.5) 80%, transparent),
+  linear-gradient(to bottom, transparent, rgba(238, 238, 238, 0.5) 20%, rgba(238, 238, 238, 1) 50%, rgba(238, 238, 238, 0.5) 80%, transparent),
+  linear-gradient(to left, transparent, rgba(238, 238, 238, 0.5) 20%, rgba(238, 238, 238, 1) 50%, rgba(238, 238, 238, 0.5) 80%, transparent),
+  linear-gradient(to right, transparent, rgba(238, 238, 238, 0.5) 20%, rgba(238, 238, 238, 1) 50%, rgba(238, 238, 238, 0.5) 80%, transparent); */
 }
+
 
 .info{
   display:flex;
   flex-direction:row;
   justify-content: center;
+  font-size: 20px;
   /* border: 3px solid gold */
 }
 
@@ -61,8 +72,13 @@ body{
 .watch{
   /* border: 3px solid silver; */
   display: flex;
-  flex-direction: row;
-  align-items: top;
+  flex-direction: column;
+  /* align-items: left; */
+  justify-content: left;
+}
+
+a{
+  text-decoration: none;
 }
 
 .Gallery div{
