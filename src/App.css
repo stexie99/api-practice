@@ -39,8 +39,7 @@ body{
   margin-top:1em;
   background-size:cover;
   background-repeat: no-repeat;
-  box-shadow: 0 0 20px 20px #eeeeee inset;
-  border: none;
+  box-shadow: 0 0 5px 20px #eeeeee inset;
   /* mask-image: 
   linear-gradient(to top, transparent, rgba(238, 238, 238, 0.5) 20%, rgba(238, 238, 238, 1) 50%, rgba(238, 238, 238, 0.5) 80%, transparent),
   linear-gradient(to bottom, transparent, rgba(238, 238, 238, 0.5) 20%, rgba(238, 238, 238, 1) 50%, rgba(238, 238, 238, 0.5) 80%, transparent),
@@ -52,16 +51,22 @@ body{
 .info{
   display:flex;
   flex-direction:row;
-  justify-content: center;
+  justify-content: space-evenly;
   font-size: 20px;
+  margin-top: 30px;
   /* border: 3px solid gold */
+}
+
+.info h2{
+  font-size:20px;
+  margin-top: 0;
 }
 
 .text{
   /* border: 3px solid pink; */
   display: flex;
   flex-direction: column;
-  margin-left: 2em;
+  margin-left: 1vw;
   /* margin-top: 1em */
 }
 
@@ -73,12 +78,27 @@ body{
   /* border: 3px solid silver; */
   display: flex;
   flex-direction: column;
-  /* align-items: left; */
-  justify-content: left;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 1em;
 }
 
-a{
+.watch a{
   text-decoration: none;
+  color: inherit;
+}
+
+.watch a:focus {
+  outline: 2px solid red; /* Custom focus outline */
+}
+
+.watch a:hover{
+  color:silver;
+}
+
+
+.watch li{
+  list-style: none;
 }
 
 .Gallery div{

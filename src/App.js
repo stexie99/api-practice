@@ -2,7 +2,6 @@ import './App.css';
 import React, { useState, useEffect } from 'react'
 import SearchBar from './components/SearchBar';
 import Gallery from './components/Gallery'
-import { Image } from 'react-bootstrap';
 
 function App() {
   let [search, setSearch] = useState('')
