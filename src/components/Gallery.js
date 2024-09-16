@@ -1,11 +1,11 @@
-import react, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 function Gallery(props){
     const ratings = props.data.Ratings.map((review)=>{
         return(
             <li key={review.Source}>
-                <li><a href ={review.Source === 'Internet Movie Database'? `https://www.imdb.com/title/${props.data.imdbID}` : review.Source === 'Metacritic' ? `https://www.metacritic.com/` : review.Source === 'Rotten Tomatoes' ? `https://www.rottentomatoes.com/` : '#'} target="_blank">{review.Source}</a>: {review.Value}</li>
+                <a href ={review.Source === 'Internet Movie Database'? `https://www.imdb.com/title/${props.data.imdbID}` : review.Source === 'Metacritic' ? `https://www.metacritic.com/` : review.Source === 'Rotten Tomatoes' ? `https://www.rottentomatoes.com/` : '#'} target="_blank">{review.Source}</a>: {review.Value}
             </li>
         )
     })
