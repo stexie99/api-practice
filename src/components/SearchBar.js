@@ -6,7 +6,7 @@ function SearchBar(props){
     
     return(
         <>
-            <form onSubmit={(e)=> props.handleSearch(e, searchTerm)}>
+            <form className='searchBar' onSubmit={(e)=> props.handleSearch(e, searchTerm)}>
                 <input type='text' onChange={(e)=> setSearchTerm(e.target.value)}/>
                 <input type ='submit'/>
             </form>

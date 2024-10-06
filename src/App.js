@@ -7,6 +7,7 @@ function App() {
   let [search, setSearch] = useState('')
   let [data, setData] = useState('')
   const API_URL = 'http://www.omdbapi.com/?apikey=a6be511c&t='
+  
   useEffect(()=>{
     if(search){
     const fetchData = async () => {

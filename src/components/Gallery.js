@@ -19,8 +19,10 @@ function Gallery(props){
                     <h1>{props.data.Title}</h1> 
                     <h2>{props.data.Year}, Directed by {props.data.Director}</h2>
                     <p>{props.data.Plot}</p>
+                    <h3>Awards</h3>
                     <p>{props.data.Awards}</p>
-                    {/* <p>{Ratings}</p> */}
+                    <h3>Actors</h3>
+                    <p>{props.data.Actors}</p>
                 </div>
                 <div className='watch'>
                     <ul>
